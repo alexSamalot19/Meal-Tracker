@@ -51,5 +51,8 @@ public class Food {
     void addCategory(Category category) {
         this.mealCategories.add(category);
     }
+
+   void showCalories(){ System.out.printf("Calories are: %s %n", this.mealCalories);}
+    void showFat(){ System.out.printf("Fat is: %s %n", this.mealFat);}
 }
-}
+

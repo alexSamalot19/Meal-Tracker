@@ -5,12 +5,12 @@ public class User {
     private String firstName;
     private String lastName;
     private String email;
-    private int targetAdherence = 90;
+    private double targetAdherence = 90;
 
     /* This is called a constructor. This is th function that's called whenever
      *   you create a new User, and is generally where we put our initialization
      *   logic. */
-    User(String firstName, String lastName, String email, int targetAdherence) {
+    User(String firstName, String lastName, String email, double targetAdherence) {
         this.setFirstName(firstName);
         this.setLastName(lastName);
         this.setEmail(email);
@@ -44,11 +44,11 @@ public class User {
         this.email = email;
     }
 
-    public int getTargetAdherence() {
+    public double getTargetAdherence() {
         return this.targetAdherence;
     }
 
-    public void setTargetAdherence(int targetAdherence) {
+    public void setTargetAdherence(double targetAdherence) {
         this.targetAdherence = targetAdherence;
     }
 

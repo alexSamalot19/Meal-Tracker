@@ -1,2 +1,2 @@
-public enum Category {Fruit, Vegetable, Protein, Fat, Beverage }
+public enum Category {Fruit, Vegetable, Protein, Fat }
 
