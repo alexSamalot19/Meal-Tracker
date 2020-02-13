@@ -22,7 +22,6 @@ public class MealTracker {
         lunch.add(sunday);
         dinner.add(burger);
 
-
         Meal todayBreakfast = new Meal(breakfast);
         Meal todayLunch = new Meal(lunch);
         Meal todayDinner = new Meal(dinner);
@@ -30,29 +29,25 @@ public class MealTracker {
         User jim = new User("Jim", "test", "jimTest@testmail.com", 99);
         jim.introduce();
 
+        userMeals.add(todayBreakfast);
+        userMeals.add(todayLunch);
+        userMeals.add(todayDinner);
 
-            userMeals.add(todayBreakfast);
-            userMeals.add(todayLunch);
-            userMeals.add(todayDinner);
-
-            double count = 0;
-
-            for (Meal meal : userMeals) {
-                if (meal.isComplete()) {
-                    count += 1;
-
-                }
-
+        double count = 0;
+        for (Meal meal : userMeals) {
+            if (meal.isComplete()) {
+                count += 1;
             }
+        }
 
         double percentAdherence = (count/userMeals.size()) * 100;
         System.out.printf("You are at %f adherence %n", percentAdherence);
 
-            if (percentAdherence>=jim.getTargetAdherence()){
-                System.out.printf("Congratulations!!! %n");
-            } else{
-                System.out.printf("Better luck next time %n");
-            }
-
+        if (percentAdherence>=jim.getTargetAdherence()){
+            System.out.printf("Congratulations!!! %n");
+        } else{
+            System.out.printf("Better luck next time %n");
         }
+
+    }
 }

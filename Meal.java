@@ -8,7 +8,6 @@ public class Meal {
         this.mealFoods = mealFoods;
     }
 
-
     boolean isComplete() {
         boolean protein = false;
         boolean fat = false;
@@ -76,16 +75,10 @@ public class Meal {
         return protein;
     }
 
-//    String getMealFoods() {
-//        return this.mealFoods;
-//    }
-
     void viewFoods() {
         for (Food food : this.mealFoods) {
             System.out.println(food.getName());
         }
     }
-
-
 
 }

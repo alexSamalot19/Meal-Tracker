@@ -49,7 +49,7 @@ public class User {
     }
 
     public void introduce() {
-        System.out.println(String.format("My username is %s.", this.firstName));
+        System.out.println(String.format("Welcome: %s.", this.firstName));
     }
 
     public static int getCount() {
