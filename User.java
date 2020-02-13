@@ -7,16 +7,12 @@ public class User {
     private String email;
     private double targetAdherence = 90;
 
-    /* This is called a constructor. This is th function that's called whenever
-     *   you create a new User, and is generally where we put our initialization
-     *   logic. */
     User(String firstName, String lastName, String email, double targetAdherence) {
         this.setFirstName(firstName);
         this.setLastName(lastName);
         this.setEmail(email);
         this.setTargetAdherence(targetAdherence);
 
-        // Increment count whenever we create a new user.
         User.sUsersCreated += 1;
     }
 
@@ -56,7 +52,6 @@ public class User {
         System.out.println(String.format("My username is %s.", this.firstName));
     }
 
-    // This is a method on the CLASS-not an individual user object.
     public static int getCount() {
         return User.sUsersCreated;
     }

@@ -2,12 +2,12 @@ import java.util.ArrayList;
 
 public class Meal {
 
-    private final ArrayList<Food> mealFoods = new ArrayList<>();
-    private final String mealName;
+    private final ArrayList<Food> mealFoods;
 
-    Meal (String name) {
-        this.mealName = name;
+    Meal (ArrayList<Food> mealFoods) {
+        this.mealFoods = mealFoods;
     }
+
 
     boolean isComplete() {
         boolean protein = false;
@@ -76,15 +76,16 @@ public class Meal {
         return protein;
     }
 
-    String getName() {
-        return this.mealName;
-    }
+//    String getMealFoods() {
+//        return this.mealFoods;
+//    }
 
     void viewFoods() {
-        System.out.printf("%s Meal: %n", this.mealName);
         for (Food food : this.mealFoods) {
             System.out.println(food.getName());
         }
     }
+
+
 
 }
